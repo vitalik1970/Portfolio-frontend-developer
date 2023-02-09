@@ -418,13 +418,13 @@ html, body {
 
 .footer {
    
-   padding: 5vh 0;
+    padding: 5vh 0; 
     /* background-color: var(--dark-bg); */
     color: var(--header-text);
-    background-image: url('./../img/1645709436_16-kartinkin-net-p-informatsionnie-tekhnologii-kartinki-19.jpg');
+    /* background-image: url('./../img/1645709436_16-kartinkin-net-p-informatsionnie-tekhnologii-kartinki-19.jpg');
     background-repeat: no-repeat;
     background-size:cover;
-    background-position: center center;
+    background-position: center center; */
 }
 
 .footer__wrapper {
@@ -482,8 +482,46 @@ html, body {
     background-size:contain;
     background-position: center;
 
-}   
- 
+} 
+.parallax {
+    /* The image used */
+    background-image: url("../img/1645709418_26-kartinkin-net-p-informatsionnie-tekhnologii-kartinki-30.jpg");
+
+    /* Set a specific height */
+    height: 870px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+.parallax1 {
+    /* The image used */
+    background-image: url("../img/1645709436_16-kartinkin-net-p-informatsionnie-tekhnologii-kartinki-19.jpg");
+
+    /* Set a specific height */
+    height: 800px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax2 {
+    /* The image used */
+    background-image: url("../img/1645709464_21-kartinkin-net-p-informatsionnie-tekhnologii-kartinki-25.jpg");
+
+    /* Set a specific height */
+    height: 200px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 @media (max-width: 680px) {
 
     .nav-row {
