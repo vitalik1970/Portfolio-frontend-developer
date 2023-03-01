@@ -359,7 +359,16 @@ html, body {
     line-height: 1.3;
     color: var(--project-card-text);
 }
-
+.em-ribbon {
+    position: absolute;
+     left:0;
+      top:0;
+       width: 90px;
+        height: 90px;
+         background: url('https://stfalcon.github.io/stopwar/img/stop-war-in-ukraine.png');
+          z-index: 20;
+           border: 0;
+}
 /* Project details */
 
 .project-details {
@@ -501,7 +510,7 @@ html, body {
     background-image: url("../img/1645709436_16-kartinkin-net-p-informatsionnie-tekhnologii-kartinki-19.jpg");
 
     /* Set a specific height */
-    height: 800px;
+   
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
