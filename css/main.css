@@ -2,14 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-/*
-font-family: 'DM Sans', sans-serif;
-font-family: 'Poppins', sans-serif;
-*/
 
-/* * {
-    border: 1px solid red;
-} */
 
 :root {
     --sizeindex: calc(1vw + 1vh);
@@ -26,7 +19,8 @@ font-family: 'Poppins', sans-serif;
     --header-text: var(--white);
     --accent: var(--purple);
 
-    /* Light mode */
+    --bone: 24px;
+    --bone_w: 1320px;
     --page-bg: var(--white);
     --text-color: var(--black);
 
@@ -37,37 +31,28 @@ font-family: 'Poppins', sans-serif;
     --box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
 }
 
-.dark {
-     /* Dark mode */
-    --page-bg: #252526;
-    --text-color: var(--white);
-
-    --title-1: var(--white);
-
-    --project-card-bg: var(--black);
-    --project-card-text: var(--white);
-    --box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.8);
-}
-
 html, body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+margin: 0;
+    padding: 0;
+    font-size: var(--body);
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.4;
 
     font-family: 'DM Sans', 'Poppins', sans-serif;
     letter-spacing: -0.5px;
-
-    /* Light mode */
-    /* background-color: var(--page-bg); */
-    color: var(--text-color);
+    color: var(--white);
 }
 
-/* header */
+.bone {
+    width: 100%;
+    height: 100%;
+    max-width: calc(var(--bone_w) + var(--bone) * 2);
+    margin: 0 auto;
+    padding: 0 var(--bone);
+}
 .header {
     height: 100%;
-    
-
-    /* background-color: var(--dark-bg); */
     background-image: url('./../img/1645709436_16-kartinkin-net-p-informatsionnie-tekhnologii-kartinki-19.jpg');
     background-repeat: no-repeat;
     background-size:cover;
@@ -75,22 +60,22 @@ html, body {
 
     
 }
-.container {
+/* .container {
     color: var(--header-text);
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
-}
-.header_content {
+} */
+.header__content {
     margin: 7% 0 11%;
    
-    max-width: 55vw;
+    max-width: 63vw;
     margin-right: 3vw;
-    justify-self: end;
+   text-align: left;
 }
-.header_block {
+.header__conteiner {
     display: grid;
     grid-template-columns: 5fr 1fr;
     grid-gap: 2vw;
@@ -127,25 +112,22 @@ html, body {
 /* Nav */
 
 .nav {
-    padding: 20px 0;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
     border-bottom: 2px solid var(--white);
-    /* background-color: var(--dark-bg); */
-    color: var(--header-text);
     letter-spacing: normal;
-}
-.nav-item {
-    padding: 0 15px;
-    display: flex;
-    justify-content: space-between;
+    padding: 20px;
 }
 
 .nav-row {
     display: flex;
    justify-content: space-between;
     align-items: center;
-   
-   
     flex-wrap: wrap;
+}
+._black {
+    color: var(--black) !important;
 }
 
 .logo {
@@ -194,49 +176,6 @@ html, body {
     background-color: var(--accent);
 }
 
-/* Dark mode btn */
-
-.dark-mode-btn {
-    order: 9;
-
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-
-    width: 51px;
-    height: 26px;
-    padding: 5px;
-
-    border-radius: 50px;
-    background-color: #272727;
-}
-
-.dark-mode-btn::before {
-    content: "";
-
-    position: absolute;
-    top: 1px;
-    left: 1px;
-
-    display: block;
-    width: 24px;
-    height: 24px;
-
-    border-radius: 50%;
-    background-color: var(--white);
-
-    transition: left 0.2s ease-in;
-}
-
-.dark-mode-btn--active::before {
-    left: 26px;
-}
-
-.dark-mode-btn__icon {
-    position: relative;
-    z-index: 9;
-}
-
 .header__title {
     margin-bottom: 20px;
     font-size: calc(var( --sizeindex) * 2);
@@ -269,7 +208,6 @@ html, body {
 .btn {
     margin-top: 40px;
     display: inline-block;
-    height: 48px;
     padding: 12px 28px;
 
     border-radius: 5px;
@@ -320,7 +258,10 @@ html, body {
     position: relative;
     top: 1px;
 }
-
+.section {
+    height: 100vh;
+    width: 100%;
+}
 /* Projects  */
 .main {
     padding: 30px 0;
