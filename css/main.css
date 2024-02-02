@@ -112,7 +112,7 @@ margin: 0;
     display:flex;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 2px solid var(--white);
+    /* border-bottom: 2px solid var(--white); */
     letter-spacing: normal;
     padding: 20px;
 }
@@ -253,6 +253,38 @@ margin: 0;
     position: relative;
     top: 1px;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    /* margin: 0 auto; */
+  }
+  
+  label {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #5e5e5e;
+  }
+  
+  input, textarea {
+    color: #5e5e5e;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+  }
+  
+  .button__form {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+
+
 .section {
 
     width: 100%;
@@ -358,8 +390,11 @@ margin: 0;
 /* Footer */
 
 .footer {
-   
+   /* margin-top: 100%; */
     padding: 5vh 0; 
+    /* position: fixed; /* или position: absolute; */
+    /* bottom: 0;
+    width: 100%; */
     /* background-color: var(--dark-bg); */
     color: var(--header-text);
     background-image: url('./../img/1645709436_16-kartinkin-net-p-informatsionnie-tekhnologii-kartinki-19.jpg');

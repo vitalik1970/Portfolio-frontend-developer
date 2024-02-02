@@ -11,64 +11,115 @@
 </head>
 <body>
    
-    <div class="bone">
-        <nav class="nav">
-    
-            <a href="./index.html" class="logo _black"><strong>Web</strong>development</a>
-    
-            <ul class="nav-list _black">
-                <li class="nav-list__item"><a href="#projects" class="nav-list__link nav-list__link _black">Projects</a>
-                </li>
-                <li class="nav-list__item"><a href="./myhistori.html" class="nav-list__link _black">About me</a></li>
-                <li class="nav-list__item _black"><a href="./contacts.html" class="nav-list__link--active _black">Contacts</a></li>
-            </ul>
-            <div class="lng_btn ">
-                <a href="https://ytcenko1970.000webhostapp.com/" class="nav-list__link--active _black">EN</a>
-                <a href="/index_ru.html" class="nav-list__link _black">RU</a>
-            </div>    
-        </nav>
-    </div>
-
-    <main class="section">
+    <header class="header parallax1">
         <div class="bone">
+            <nav class="nav">
+         
+                        <a href="./index.html" class="logo"><strong>Web</strong>development</a>
+        
+                        <ul class="nav-list">
+                            <li class="nav-list__item"><a href="#projects"
+                                    class="nav-list__link nav-list__link--active">Projects</a></li>
+                            <li class="nav-list__item"><a href="./myhistori.html" class="nav-list__link">About me</a></li>
+                            <li class="nav-list__item"><a href="./contacts.html" class="nav-list__link">Contacts</a></li>
+                        </ul>
+                        <div class="lng_btn ">
+                            <a href="https://ytcenko1970.000webhostapp.com/" class="nav-list__link--active">EN</a>
+                            <a href="/index_ru.html" class="nav-list__link">RU</a>
+                        </div>
+               
+        
+              
+            </nav>
+            
+            </div>
+        </header>
+    
+   <main class="section">
+        <div class="bone">
+          <div class="contact__rigth">
+            <div class="contact__rigth-tel">
+                <h3>Telephone</h3>
+                <a href="tel:+380991726212">+38 (099) 172-62-12</a>
+            </div>
+          <div class="contact__rigth-mail">
+            <h3>E-mail:</h3>
+            <a href="mailto:ytcenko1970@gmail.com">ytcenko1970@gmail.com</a>
+          </div>
+          <div class="contact__rigth-social"></div>
+        </div>
             <div class="contact__left">
              <div class="contact__left-content">
 
+              <form id="feedbackForm">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" placeholder="enter name" name="name" >
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="enter email" name="email" >
+                
+                <label for="message">Сообщение:</label>
+                <textarea id="message" placeholder="enter message" name="message" ></textarea>
+                
+                <button class="button__form" type="button" onclick="sendFeedback()">Отправить</button>
+              </form>
+              <script>
+                function sendFeedback() {
+                  const name = document.getElementById("name").value;
+                  const email = document.getElementById("email").value;
+                  const message = document.getElementById("message").value;
+              
+                  const data = {
+                    name: name,
+                    email: email,
+                    message: message,
+                  };
+              
+                  // Добавляем email в объект data
+                  data.senderEmail = email;
+              
+                  fetch('http://localhost:3000/send-email', {
+                    method: 'POST',
+                    headers: {
+                      'Content-Type': 'application/json',
+                    },
+                    mode: 'cors',
+                    body: JSON.stringify(data),
+                  })
+                  .then(response => response.json())
+                  .then(data => {
+                    alert('Сообщение успешно отправлено');
+                  })
+                  .catch((error) => {
+                    console.error('Ошибка:', error);
+                  });
+                }
+              </script>
              </div>
             </div>
-            <div class="contact__rigth">
-                <div class="contact__rigth-tel">
-                    <h3>Telephone</h3>
-                    <a href="tel:+380991726212">+38 (099) 172-62-12</a>
-                </div>
-              <div class="contact__rigth-mail">
-                <h3>E-mail:</h3>
-                <a href="mailto:ytcenko1970@gmail.com">ytcenko1970@gmail.com</a>
-              </div>
-              <div class="contact__rigth-social"></div>
-            </div>
+            
         </div>
-    </main>
+    </main> 
 
     <footer class="footer parallax2">
         <div class="container">
             <div class="footer__wrapper">
                 <ul class="social">
-                    <!-- <li class="social__item"><a href="#!"><img src="./img/icons/vk.svg" alt="Link"></a></li> -->
+                    
                     <li class="social__item"><a href="https://www.instagram.com/iatsenko1748/"><img src="./img/icons/instagram.svg" alt="Link"></a></li>
                     <li class="social__item"><a href="#!"><img src="./img/icons/twitter.svg" alt="Link"></a></li>
                     <li class="social__item"><a href="https://github.com/vitalik1970?tab=repositories"><img src="./img/icons/gitHub.svg" alt="Link"></a></li>
-                    <li class="social__item"><a href="https://www.linkedin.com/in/%D0%B2%D0%B8%D1%82%D0%B0%D0%BB%D0%B8%D0%B9-%D1%8F%D1%86%D0%B5%D0%BD%D0%BA%D0%BE-5806b5226/"><img src="./img/icons/linkedIn.svg" alt="Link"></a></li>
+                    <li class="social__item"><a href="https://www.linkedin.com/in/vitaliy-yatsenko-5806b5226/"><img src="./img/icons/linkedIn.svg" alt="Link"></a></li>
                 </ul>
                 <div class="copyright">
-                    <p>© 2023 ytcenko1970@gmail.com</p>
+                    <p>© 2024 <a href="mailto:ytcenko1970@gmail.com" style="color: #fff">ytcenko1970@gmail.com</a></p>
                     <p><a style="color: #fff" href="tel:+380991726212">+38 (099) 172-62-12</a></p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="./js/main.js"></script>
+    <!-- <script src="./js/main.js"></script> -->
 
 </body>
 </html>
