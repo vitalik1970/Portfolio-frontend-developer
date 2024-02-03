@@ -4,11 +4,11 @@ const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 
 const app = express();
-const port = 3000;
+const port = 443;
 
 // Используем cors
 app.use(cors({
-  origin: 'https://tangerine-rabanadas-ec6fdc.netlify.app', // Укажите домен вашего сайта
+  origin: 'https://creategift.website', // Укажите домен вашего сайта
   methods: 'POST',
   credentials: true,
 }));
@@ -17,7 +17,7 @@ app.use(cors({
 app.use(bodyParser.json());
 
 // Обработка POST запроса
-app.post('/send-email', (req, res) => {
+app.post('https://creategift.website/send-email', (req, res) => {
   const { name, email, message, senderEmail } = req.body;
 
   // Создание объекта транспорта Nodemailer
