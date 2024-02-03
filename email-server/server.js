@@ -7,7 +7,11 @@ const app = express();
 const port = 3000;
 
 // Используем cors
-app.use(cors());
+app.use(cors({
+  origin: 'https://creategift.website', // Укажите домен вашего сайта
+  methods: 'POST',
+  credentials: true,
+}));
 
 // Парсинг данных из тела запроса
 app.use(bodyParser.json());
@@ -47,5 +51,5 @@ app.post('/send-email', (req, res) => {
 
 // Запуск сервера
 app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+  console.log(`Server is running on https://creategift.website`);
 });
