@@ -8,7 +8,7 @@ const port = 3000;
 
 // Используем cors
 app.use(cors({
-  origin: 'https://creategift.website', // Укажите домен вашего сайта
+  origin: 'https://tangerine-rabanadas-ec6fdc.netlify.app', // Укажите домен вашего сайта
   methods: 'POST',
   credentials: true,
 }));
