@@ -2,6 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
+const https = require('https');
+const fs = require('fs');
 
 const app = express();
 const port = 443;
@@ -17,7 +19,7 @@ app.use(cors({
 app.use(bodyParser.json());
 
 // Обработка POST запроса
-app.post('https://creategift.website/send-email', (req, res) => {
+app.post('/send-email', (req, res) => {
   const { name, email, message, senderEmail } = req.body;
 
   // Создание объекта транспорта Nodemailer
