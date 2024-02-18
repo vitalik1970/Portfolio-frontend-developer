@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./img/free-icon-technology-1185930.png" type="image/x-icon">
+    <link href="https://fonts.cdnfonts.com/css/futura-pt" rel="stylesheet">
     <title>Freelancer portfolio</title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/slyle.css">
@@ -13,15 +14,15 @@
    
     <header class="header parallax1">
         <div class="bone">
-            <nav class="nav">
+            <nav class="nav__contact">
          
                         <a href="./index.html" class="logo"><strong>Web</strong>development</a>
         
                         <ul class="nav-list">
-                            <li class="nav-list__item"><a href="#projects"
-                                    class="nav-list__link nav-list__link--active">Projects</a></li>
+                            <li class="nav-list__item"><a href="/index.html#projects"
+                                    class="nav-list__link ">Projects</a></li>
                             <li class="nav-list__item"><a href="./myhistori.html" class="nav-list__link">About me</a></li>
-                            <li class="nav-list__item"><a href="./contacts.html" class="nav-list__link">Contacts</a></li>
+                            <li class="nav-list__item"><a href="./contacts.html" class="nav-list__link nav-list__link--active">Contacts</a></li>
                         </ul>
                         <div class="lng_btn ">
                             <a href="https://ytcenko1970.000webhostapp.com/" class="nav-list__link--active">EN</a>
@@ -35,23 +36,40 @@
             </div>
         </header>
     
-   <main class="section">
-        <div class="bone">
-          <div class="contact__rigth">
-            <div class="contact__rigth-tel">
-                <h3>Telephone</h3>
-                <a href="tel:+380991726212">+38 (099) 172-62-12</a>
-            </div>
-          <div class="contact__rigth-mail">
-            <h3>E-mail:</h3>
-            <a href="mailto:ytcenko1970@gmail.com">ytcenko1970@gmail.com</a>
-          </div>
-          <div class="contact__rigth-social"></div>
-        </div>
-            <div class="contact__left">
-             <div class="contact__left-content">
+   <main class="section__contact">
+    <div class='feedback__container'>
+      <div class='feedback__contact'>
 
-              <form id="feedbackForm">
+<p class='feedback__p' >Ukraine, Donetsk region,<br/> Svyatogorsk city</p>
+
+                <ul class="social">
+
+                    <li class="social__item"><a href="https://www.instagram.com/iatsenko1748/"><img src="./img/icons/instagram.svg" alt="Link"/></a></li>
+                    <li class="social__item"><a  href="https://twitter.com/YcenkoVitalij"><span class="social__item-x"></span></a></li>
+                    <li class="social__item"><a href="https://github.com/vitalik1970?tab=repositories"><img src="./img/icons/gitHub.svg" alt="Link"/></a></li>
+                    <li class="social__item"><a href="https://www.linkedin.com/in/vitaliy-yatsenko-5806b5226/"><img src="./img/icons/linkedIn.svg" alt="Link"/></a></li>
+                </ul>
+                <div class="copyright">
+                    <p> <a href="mailto:ytcenko1970@gmail.com" style="color: #fff">ytcenko1970@gmail.com</a></p>
+                    <p><a style="color: #fff" href="tel:+380991726212">+38 (099) 172-62-12</a></p>
+        </div>
+    </div> 
+               <form id="feedbackForm" class='feedbackform' >
+      <label htmlFor="name">Sorry, the form is temporarily unavailable.</label>
+      <input type="text" id="name" disabled placeholder="NAME*" class='feedback__form' name="name"  />
+
+      <label htmlFor="email"></label>
+      <input type="email" id="email" disabled placeholder="EMAIL*" class='feedback__form'  name="email" />
+
+      <label htmlFor="message"></label>
+      <textarea id="message" disabled placeholder="MESSAGE*" class='feedback__form'  name="message" ></textarea>
+
+      <button class="button__form" disabled type="button" >
+        SEND
+      </button>
+    </form>
+
+        <!-- <form id="feedbackForm">
                 <label for="name">Имя:</label>
                 <input type="text" id="name" placeholder="enter name" name="name" >
                 
@@ -94,14 +112,14 @@
                     console.error('Ошибка:', error);
                   });
                 }
-              </script>
+              </script> -->
               
              </div>
             </div>
             
         </div>
-    </main> 
-
+    </main>  
+   
     <footer class="footer parallax2">
         <div class="container">
             <div class="footer__wrapper">
