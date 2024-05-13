@@ -728,3 +728,15 @@ font-size: 20px;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
+.circle {
+    position: absolute;
+    width: calc(50vw - 50px);
+    height: auto;
+    bottom: 0px;
+    right: 50px;
+    transform: translatey(50%);
+    pointer-events: none;
+    z-index: 3;
+    overflow: hidden;
+    max-width: 900px;
+}
